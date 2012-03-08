@@ -13,6 +13,8 @@
 		EA6498131508FB570077266D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA6498111508FB570077266D /* InfoPlist.strings */; };
 		EA6498151508FB570077266D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6498141508FB570077266D /* main.m */; };
 		EA6498191508FB570077266D /* Ex09AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6498181508FB570077266D /* Ex09AppDelegate.m */; };
+		EA649822150923080077266D /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA649820150923080077266D /* RecipeTableViewController.m */; };
+		EA649823150923080077266D /* RecipeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA649821150923080077266D /* RecipeTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,15 @@
 		EA6498081508FB570077266D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA64980A1508FB570077266D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA64980C1508FB570077266D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EA6498101508FB570077266D /* Excercise09-Info.plist */ = {isa = PBXFileReference; path = "Excercise09-Info.plist"; sourceTree = "<group>"; };
+		EA6498101508FB570077266D /* Excercise09-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Excercise09-Info.plist"; sourceTree = "<group>"; };
 		EA6498121508FB570077266D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA6498141508FB570077266D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA6498161508FB570077266D /* Excercise09-Prefix.pch */ = {isa = PBXFileReference; path = "Excercise09-Prefix.pch"; sourceTree = "<group>"; };
-		EA6498171508FB570077266D /* Ex09AppDelegate.h */ = {isa = PBXFileReference; path = Ex09AppDelegate.h; sourceTree = "<group>"; };
+		EA6498161508FB570077266D /* Excercise09-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Excercise09-Prefix.pch"; sourceTree = "<group>"; };
+		EA6498171508FB570077266D /* Ex09AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ex09AppDelegate.h; sourceTree = "<group>"; };
 		EA6498181508FB570077266D /* Ex09AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ex09AppDelegate.m; sourceTree = "<group>"; };
+		EA64981F150923080077266D /* RecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewController.h; sourceTree = "<group>"; };
+		EA649820150923080077266D /* RecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewController.m; sourceTree = "<group>"; };
+		EA649821150923080077266D /* RecipeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,9 @@
 				EA6498171508FB570077266D /* Ex09AppDelegate.h */,
 				EA6498181508FB570077266D /* Ex09AppDelegate.m */,
 				EA64980F1508FB570077266D /* Supporting Files */,
+				EA64981F150923080077266D /* RecipeTableViewController.h */,
+				EA649820150923080077266D /* RecipeTableViewController.m */,
+				EA649821150923080077266D /* RecipeTableViewController.xib */,
 			);
 			path = Excercise09;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6498131508FB570077266D /* InfoPlist.strings in Resources */,
+				EA649823150923080077266D /* RecipeTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +162,7 @@
 			files = (
 				EA6498151508FB570077266D /* main.m in Sources */,
 				EA6498191508FB570077266D /* Ex09AppDelegate.m in Sources */,
+				EA649822150923080077266D /* RecipeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

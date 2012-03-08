@@ -11,5 +11,6 @@
 @interface Ex09AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) NSMutableArray *listOfRecipes;
 
 @end
