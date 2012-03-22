@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RecipeTableViewController;
 
 @interface Ex09AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) NSMutableArray *listOfRecipes;
-
+@property (nonatomic, retain) RecipeTableViewController *tvc;
+@property (nonatomic, retain) UINavigationController *nc;
 @end

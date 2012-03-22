@@ -11,41 +11,42 @@
 
 @implementation Ex09AppDelegate
 
-@synthesize window = _window;
-@synthesize listOfRecipes = _listOfRecipes;
-
-RecipeTableViewController *tvc;
-UINavigationController *nc;
+@synthesize window;// = _window;
+@synthesize listOfRecipes;// = _listOfRecipes;
+@synthesize tvc;
+@synthesize nc;
 
 - (void)dealloc
 {
     [nc release];
     [tvc release];
-    [_window release];
+    [listOfRecipes release];
+    [window release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    //self.window.backgroundColor = [UIColor whiteColor];
     
     // My Implementation:
-    _listOfRecipes = [[NSMutableArray alloc] init];
-    [_listOfRecipes addObject:@"Recipe1"];
-    [_listOfRecipes addObject:@"Recipe2"];
-    [_listOfRecipes addObject:@"Recipe3"];
-    [_listOfRecipes addObject:@"Recipe4"];
-    [_listOfRecipes addObject:@"Recipe5"];
+    listOfRecipes = [[NSMutableArray alloc] init];
+    [listOfRecipes addObject:@"Recipe1"];
+    [listOfRecipes addObject:@"Recipe2"];
+    [listOfRecipes addObject:@"Recipe3"];
+    [listOfRecipes addObject:@"Recipe4"];
+    [listOfRecipes addObject:@"Recipe5"];
     
     nc = [[UINavigationController alloc] init];
     tvc = [[RecipeTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [nc pushViewController:tvc animated:NO];
+  
     [self.window addSubview:nc.view];
-    
-    
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

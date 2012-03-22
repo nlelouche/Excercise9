@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Ex09AppDelegate;
 
 @interface RecipeTableViewController : UITableViewController
 
+
+@property (nonatomic, retain) Ex09AppDelegate *appDelegate;
 @end

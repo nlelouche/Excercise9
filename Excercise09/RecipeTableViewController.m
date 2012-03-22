@@ -10,7 +10,8 @@
 #import "Ex09AppDelegate.h"
 
 @implementation RecipeTableViewController
-Ex09AppDelegate *appDelegate;
+@synthesize appDelegate;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,7 +36,8 @@ Ex09AppDelegate *appDelegate;
 {
     [super viewDidLoad];
 
-    appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate = /*(Ex09AppDelegate *)*/ [[UIApplication sharedApplication] delegate];
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     
