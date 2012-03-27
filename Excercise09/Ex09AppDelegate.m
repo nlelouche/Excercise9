@@ -41,6 +41,8 @@
     
     nc = [[UINavigationController alloc] init];
     tvc = [[RecipeTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    tvc.appDelegate = self;
+    
     [nc pushViewController:tvc animated:NO];
   
     [self.window addSubview:nc.view];

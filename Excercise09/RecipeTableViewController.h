@@ -12,5 +12,5 @@
 @interface RecipeTableViewController : UITableViewController
 
 
-@property (nonatomic, retain) Ex09AppDelegate *appDelegate;
+@property (nonatomic, assign) Ex09AppDelegate *appDelegate;
 @end

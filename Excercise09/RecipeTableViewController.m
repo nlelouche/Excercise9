@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
 
-    appDelegate = /*(Ex09AppDelegate *)*/ [[UIApplication sharedApplication] delegate];
+    //appDelegate = /*(Ex09AppDelegate *)*/ [[UIApplication sharedApplication] delegate];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
@@ -63,7 +63,10 @@
 }
 
 -(void)addRecipe{
-    [appDelegate.listOfRecipes insertObject:@"New Recipe" atIndex:0];
+    if (appDelegate && [appDelegate respondsToSelector:@selector(listOfRecipes)]) {
+        [appDelegate.listOfRecipes insertObject:@"New Recipe" atIndex:0];
+    }
+    
     NSIndexPath *ip = [NSIndexPath indexPathForRow:0 inSection:0];
     NSArray *a = [NSArray arrayWithObject:ip];
     [self.tableView insertRowsAtIndexPaths:a
@@ -108,7 +111,10 @@
 {
 
     // Return the number of rows in the section.
-    return [appDelegate.listOfRecipes count];
+    if (appDelegate && [appDelegate respondsToSelector:@selector(listOfRecipes)]) {
+        return [appDelegate.listOfRecipes count];
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,15 +127,20 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = [appDelegate.listOfRecipes objectAtIndex:indexPath.row];
-    
+    if (appDelegate && [appDelegate respondsToSelector:@selector(listOfRecipes)]) {
+        cell.textLabel.text = [appDelegate.listOfRecipes objectAtIndex:indexPath.row];
+    }    
     return cell;
+    
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:
 (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [appDelegate.listOfRecipes removeObjectAtIndex:indexPath.row];
+        if (appDelegate && [appDelegate respondsToSelector:@selector(listOfRecipes)]) {
+              [appDelegate.listOfRecipes removeObjectAtIndex:indexPath.row];
+        } 
+      
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                          withRowAnimation:YES];
     }
